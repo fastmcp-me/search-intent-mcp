@@ -1,5 +1,7 @@
 # Search Intent MCP
 
+请通过 https://aisearchintent.com 获取 API key
+
 这是一个基于 MCP (Model Context Protocol) 的搜索意图分析服务。它可以帮助分析用户搜索关键词的意图，为 SEO 分析提供支持。
 
 ## 功能特点
@@ -32,7 +34,7 @@
 
 ```bash
 # 克隆仓库
-git clone [repository-url]
+git clone
 
 # 安装依赖
 pnpm install
