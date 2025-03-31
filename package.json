@@ -1,15 +1,26 @@
 {
-  "name": "mcp-demo",
-  "version": "1.0.0",
+  "name": "@search-intent/mcp",
+  "version": "1.1.0",
   "description": "MCP Demo Server",
   "type": "module",
+  "bin": {
+    "search-intent-mcp": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && node -e \"require('fs').chmodSync('dist/index.js', '755')\"",
     "start": "node dist/index.js",
     "dev": "tsc && node dist/index.js",
-    "debug": "tsc && node --inspect dist/index.js"
+    "debug": "tsc && node --inspect dist/index.js",
+    "prepublishOnly": "pnpm build"
   },
-  "keywords": [],
+  "keywords": [
+    "mcp",
+    "search-intent",
+    "ai"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {

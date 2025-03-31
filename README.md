@@ -10,7 +10,25 @@
 - 提供相关参考链接
 - 提供搜索建议
 
-## 安装
+## 使用方法
+
+### claude 安装
+
+```json
+{
+  "mcpServers": {
+    "search_intent": {
+      "command": "npx",
+      "args": ["-y", "@search-intent/mcp"],
+      "env": {
+        "SEARCH_INTENT_API_KEY": "xxx"
+      }
+    }
+  }
+}
+```
+
+## 开发
 
 ```bash
 # 克隆仓库
@@ -21,20 +39,6 @@ pnpm install
 
 # 设置环境变量
 export SEARCH_INTENT_API_KEY=your_api_key
-```
-
-## 使用方法
-
-1. 构建项目：
-
-```bash
-pnpm build
-```
-
-2. 运行服务：
-
-```bash
-pnpm start
 ```
 
 ## API 使用示例
@@ -77,19 +81,3 @@ pnpm start
   ]
 }
 ```
-
-## 环境变量
-
-- `SEARCH_INTENT_API_KEY`: 搜索意图分析服务的 API Key
-
-## 开发
-
-开发模式下运行（自动编译）：
-
-```bash
-pnpm dev
-```
-
-## 许可证
-
-ISC

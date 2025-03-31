@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
@@ -47,42 +49,26 @@ const server = new McpServer({
 // Define and implement the search intent analysis tool
 server.tool(
   "search_intent_analysis",
-  `A powerful search intent analysis tool that helps understand user search behavior and optimize content strategy.
+  `A tool for analyzing search intent and user behavior.
 
-CAPABILITIES:
-1. Analyze search query intent and user motivation
-2. Identify relevant topic categories and classifications
-3. Provide detailed reasoning behind the intent analysis
-4. Generate semantic search suggestions
-5. Offer authoritative reference links
+Features:
+- Analyze search query intent
+- Identify relevant topic categories
+- Provide search suggestions
+- Offer reference links
 
-USE CASES:
-- SEO Optimization: Understand search patterns and improve content targeting
-- Content Strategy: Plan content based on user search intentions
-- Market Research: Analyze user interests and trends
-- User Behavior: Gain insights into search patterns and preferences
-- Keyword Research: Discover related search terms and categories
+Examples:
+"iphone 15" → Product research/purchase intent
+"python tutorial" → Learning intent
 
-EXAMPLE QUERIES:
-- "iphone 15" → Product research, comparison, or purchase intent
-- "python tutorial" → Learning intent, skill level assessment
-- "restaurants near me" → Local service with immediate intent
-- "climate change facts" → Information gathering, research intent
-- "best running shoes" → Product comparison with purchase intent
-
-RESPONSE FORMAT:
+Response format:
 - query: Original search term
-- intent: Primary search intention
-- possibleCategories: Related topic categories
-- reasoning: Detailed analysis explanation
-- references: Authoritative source links
-- searchSuggestions: Related search terms`,
+- intent: Search intention
+- categories: Related categories
+- suggestions: Related search terms
+- references: Reference links`,
   {
-    query: z
-      .string()
-      .describe(
-        "The search query to analyze. Provide any search term or phrase to understand user intent, categories, and get related suggestions."
-      ),
+    query: z.string().describe("Enter a search term to analyze"),
   },
   async ({ query }) => {
     try {
