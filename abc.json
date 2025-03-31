@@ -1,0 +1,25 @@
+{
+  "code": 0,
+  "message": "ok",
+  "data": {
+    "query": "groke3",
+    "intent": "Information lookup about the Grok 3 AI model.",
+    "possibleCategories": [
+      "Technology",
+      "Artificial Intelligence",
+      "Product Information"
+    ],
+    "reasoning": "The user is likely trying to find information about Grok 3, which is a new AI model. They may want to know its capabilities, performance, and how it compares to other AI models like GPT-4. The search could also be related to understanding its reasoning capabilities, its applications in different fields (mathematics, coding, science), and how to access or use it. Given the references to xAI, the user may also be interested in the company behind Grok 3. Some search results also mention a band named The Groke, which means the user could also be looking for music-related information.",
+    "references": [
+      {
+        "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AWQVqAI4H3yVTymFhOle34k2mCvrak46PDMcrykL1hsUHG11D-Xj6AhhA0M-afNTHYvUmGXuwcVHEOxo3H9f4q-8f9HJV8gC5vWaR1o-kP_4zUxlY0-n4kY8daaF3g==",
+        "title": "khalegy.com"
+      },
+      {
+        "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AWQVqAK-exqtjunE1hD8YM1Y-B12kLC6y-7-jRLqBDpVa0tHz24CP8FpkXbwEfD05X5ew3c_DbUVAEBR8wCOrU2AKEfAXVkmJv54hQ==",
+        "title": "x.ai"
+      }
+    ],
+    "groundingMetadata": { "searchSuggestions": ["groke3"] }
+  }
+}
